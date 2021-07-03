@@ -15,13 +15,13 @@
 // ]
 
 export const titles = [
-  // "Go on air!",
-  "Before you start",
-  "Content",
-  "Recording environment",
-  "Equipment",
-  "Editing the audio",
-  "Getting it out there",
-  "Marketing",
-  "My'PodList'",
+    // "Go on air!",
+    "Before you start",
+    "Content",
+    "Recording environment",
+    "Equipment",
+    "Editing the audio",
+    "Getting it out there",
+    "Marketing",
+    "My'PodList'"
 ];
