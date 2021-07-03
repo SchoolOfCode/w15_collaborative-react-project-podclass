@@ -1,8 +1,9 @@
 import React from "react";
 // import {useState} from "react";
-import './App.css';
-import {buttonTitles, contentData} from "./pageContent";
+import "./App.css";
+import { buttonTitles, contentData, textString } from "./pageContent";
 import Button from "../src/components/Button";
+import Paragraph from "./components/Paragraph";
 
 function App() {
   console.log(contentData);
@@ -23,11 +24,11 @@ function App() {
     //     </a>
     //   </header>
     // </div>
-      /* contentData.map((contentData) => {
+    /* contentData.map((contentData) => {
       <p key={`${contentData.id}`}>{contentData.header} </p>}); */
     <div>
-     {buttonTitles.map((button) => button = 
-      <Button buttonName = {button}/>)};
+      {buttonTitles.map((button) => (button = <Button buttonName={button} />))};
+      {contentData.map((p) => (p = <Paragraph text={p} />))}
     </div>
   );
 }

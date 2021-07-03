@@ -1,9 +1,7 @@
-import React from 'react';
+import React from "react";
 
-function Paragraph(props){
-    return(
-        <p>{props.content}</p>
-    );
+function Paragraph(props) {
+  return <p> {props.text}</p>;
 }
 
 export default Paragraph;
