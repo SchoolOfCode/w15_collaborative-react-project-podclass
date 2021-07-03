@@ -3,7 +3,7 @@ import React from "react";
 import "./App.css";
 import { titles } from "./pageContent";
 import Button from "../src/components/Button";
-import Heading1 from "./components/h1";
+import Heading1 from "../src/components/h1";
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
       )}
       ;
       {titles.map(
-        (heading) => (heading = <h1 key={heading} mainHeading={heading} />)
+        (heading) => (heading = <Heading1 key={heading} mainHeading={heading} />)
       )}
       ;
     </div>
