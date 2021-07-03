@@ -1,11 +1,11 @@
 import React from "react";
 // import {useState} from "react";
-import './App.css';
-import {buttonTitles, contentData} from "./pageContent";
+import "./App.css";
+import { titles } from "./pageContent";
 import Button from "../src/components/Button";
+import Heading1 from "./components/h1";
 
 function App() {
-  console.log(contentData);
   return (
     // <div className="App">
     //   <header className="App-header">
@@ -23,11 +23,17 @@ function App() {
     //     </a>
     //   </header>
     // </div>
-      /* contentData.map((contentData) => {
+    /* contentData.map((contentData) => {
       <p key={`${contentData.id}`}>{contentData.header} </p>}); */
     <div>
-     {buttonTitles.map((button) => button = 
-      <Button buttonName = {button}/>)};
+      {titles.map(
+        (button) => (button = <Button key={button} buttonName={button} />)
+      )}
+      ;
+      {titles.map(
+        (heading) => (heading = <h1 key={heading} mainHeading={heading} />)
+      )}
+      ;
     </div>
   );
 }
