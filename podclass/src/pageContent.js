@@ -4,6 +4,7 @@
 //     header:"Getting started" ,
 //     subheadings:["Category and Topic", "Format", "Name"] ,
 //     textContent: ["this is about category and topic", "this is about format", "this is about name"],
+//     listItems: ["", ["list item 1", "list item 2", "list item 3"]
 //     images:["getting started 1", "getting started2"]
 //     },
 //     {id: 2,
