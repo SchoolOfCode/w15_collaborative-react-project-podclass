@@ -14,6 +14,11 @@ export const contentData = [
       "this is about format",
       `this is about name ${listItems[1]} ${listItems[2]}`,
     ],
+    checklist: [
+        "what's your name?",
+        "what's your topic?",
+        "I hate Sundays"
+    ],
     images: ["getting started 1", "getting started2"],
   },
   {

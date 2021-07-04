@@ -17,6 +17,9 @@ function App() {
     console.log("hello", contentState);
   }
 
+  function logHello (){
+    console.log ("hello world");
+  }
   return (
     /* contentData.map((contentData) => {
       <p key={`${contentData.id}`}>{contentData.header} </p>}); */

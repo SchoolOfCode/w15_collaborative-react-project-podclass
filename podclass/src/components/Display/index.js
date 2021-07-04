@@ -6,6 +6,7 @@ const Display = ({ content }) => {
           <h1> {item.header}</h1>
           <h2>{item.subheadings[0]}</h2>
           <p>{item.textContent[0]}</p>
+          <li>{item.checklist}</li>
           <h2>{item.subheadings[1]}</h2>
           <p>{item.textContent[1]}</p>
           <h2>{item.subheadings[2]}</h2>

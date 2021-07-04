@@ -1,6 +1,8 @@
 PLAN FOR CHECKLIST
 
-define a element of text in the display as an 
+// create an input element for each of our checklist items within the text content
+// assign each one some form of unique id (array index?)
+// create an on-click event for that particular item to display in our checklist display
 
 
 
