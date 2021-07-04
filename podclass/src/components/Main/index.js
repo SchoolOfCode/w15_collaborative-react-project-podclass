@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Display from "./Display.js";
+import Button from "./Button";
 
 const Main = () => {
   const [content, setContent] = useState([
@@ -23,9 +24,19 @@ const Main = () => {
     },
   ]);
 
+  const [contentState, changeContentState] = useState("");
+
+  function changeState(key) {
+    changeContentState(key);
+    console.log("hello", contentState);
+  }
+
   return (
     <div className="content">
-      <Display content={content.filter((content) => content.id === 2)} />
+      <Button identity={changeState} identityNumber={1} />
+      <Display
+        content={content.filter((content) => content.id === { contentState })}
+      />
     </div>
   );
 };
