@@ -34,8 +34,9 @@ const Main = () => {
   return (
     <div className="content">
       <Button identity={changeState} identityNumber={1} />
+      <Button identity={changeState} identityNumber={2} />
       <Display
-        content={content.filter((content) => content.id === { contentState })}
+        content={content.filter((content) => content.id === contentState)}
       />
     </div>
   );
