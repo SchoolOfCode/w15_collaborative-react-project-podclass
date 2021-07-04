@@ -41,7 +41,9 @@ function App() {
 
       <div className="content">
         <Display
-          content={contentData.filter((content) => content.id === contentState)}
+          content={contentData.filter(
+            (content) => content.id === contentState + 1
+          )}
         />
       </div>
     </div>
