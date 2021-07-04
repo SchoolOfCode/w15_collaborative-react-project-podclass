@@ -1,10 +1,10 @@
 import React from "react";
 
-function Button (props) {
+function ButtonOne (props) {
 
     return (
         <button>{props.buttonName}</button>
     )
 }
 
-export default Button;
+export default ButtonOne;
