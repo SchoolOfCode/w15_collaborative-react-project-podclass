@@ -9,18 +9,24 @@ import Display from "./components/Display";
 
 import Modal from "./Modal/Modal";
 
-const buttonWrapperStyles = {
-  position: 'relative',
-  zIndex: 1,
-}
 
 function App() {
-
-  const [isOpen, setIsOpen] = React.useState(false)
-  return (
+  const buttonWrapperStyles = {
+    position: 'relative',
+    zIndex: 1,
+  }
+  
+const [isOpen, setIsOpen] = React.useState(false)
+const [content, setContent] = useState([contentData]);
+const [contentState, setContentState] = useState("");
     /* contentData.map((contentData) => {
-      <p key={`${contentData.id}`}>{contentData.header} </p>}); */
-   <>
+      <p key={`${contentData.id}`}>{contentData.header} </p>}); */    
+ function changeState(key) {
+        setContentState(key);
+        console.log("hello", contentState);
+      }
+      return (  
+<>
    <div style={buttonWrapperStyles}>
       <button onClick={()=> setIsOpen(true)}>
         Checklist
@@ -29,17 +35,9 @@ function App() {
       <Modal open={isOpen} onClose={() => setIsOpen(false) }>
         Checklist is done, we love to see it
       </Modal>
-   </div>
-    
-  const [content, setContent] = useState([contentData]);
-
-  const [contentState, setContentState] = useState("");
-
-  function changeState(key) {
-    setContentState(key);
-    console.log("hello", contentState);
-  }
-
+   </div>  
+  
+  
      <div>
       {titles.map(
         (button) =>
@@ -67,7 +65,7 @@ function App() {
       </div>
     </div>
 
-    </>
+</> 
 
   );
 
