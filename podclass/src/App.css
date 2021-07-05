@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -42,4 +42,44 @@ buttons {
 a {
   color: purple;
   text-decoration: underline;
+} */
+
+.nav-button {
+  background-color: rgba(255, 255, 255, 0.995);
+  color: rgb(0, 0, 20);
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #DEFFFF;
+  box-shadow: 0 0 15px #00FFFF, 0 0 10px #00D9FF;
+}
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.995);
+  color: rgb(20, 8, 0);
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #FDD7C5;
+  box-shadow: 0 0 15px #FF5E00, 0 0 10px #FF4800;
+}
+.nav-button-clicked {
+  background-color: rgba(20, 0, 0, 0.794);
+  color: #FF0000;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #FF0000;
+  box-shadow: 0 0 15px #FF0000, 0 0 10px #FF004C;
 }

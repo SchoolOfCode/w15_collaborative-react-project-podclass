@@ -21,16 +21,26 @@ const [isOpen, setIsOpen] = React.useState(false)
 const [content, setContent] = useState([contentData]);
 const [contentState, setContentState] = useState("");
 const listItem = ["item 1", "item 2", "item 3"];
+const [buttonClass, setButtonClass] = useState ("nav-button");
+console.log("this is the class", buttonClass);
     /* contentData.map((contentData) => {
       <p key={`${contentData.id}`}>{contentData.header} </p>}); */    
  function changeState(key) {
         setContentState(key);
         console.log("hello", contentState);
       }
+function changeButtonClass (){
+  if (buttonClass === "nav-button") {
+    setButtonClass("nav-button-clicked");
+    console.log("class changed");
+  }
+}
       return (  
 <>
    <div style={buttonWrapperStyles}>
-      <button onClick={()=> setIsOpen(true)}>
+      <button onClick={()=> {
+        setIsOpen(true);
+       }}>
         Checklist
       </button>
 
@@ -39,7 +49,7 @@ const listItem = ["item 1", "item 2", "item 3"];
       </Modal>
    </div>  
   
-  
+ 
      <div>
       {titles.map(
         (button) =>
@@ -49,6 +59,8 @@ const listItem = ["item 1", "item 2", "item 3"];
               buttonName={button}
               identity={changeState}
               identityNumber={titles.indexOf(`${button}`)}
+              className={buttonClass}
+              onClick={changeButtonClass}
             />
           ))
       )}
