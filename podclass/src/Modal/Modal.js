@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import List from "../components/List"
+import { contentData } from '../pageContent';
+import Display from '../components/Display';
 
 const modalStyles = {
     position: 'fixed',
@@ -30,6 +33,8 @@ export default function Modal({open, children, onClose}){
         <div style={modalStyles}>
         <button onClick={onClose}>Close</button>
             {children}
+        <p>some text here</p>
+        <Display content={"hi"}/>
         </div>
         </>,
         document.getElementById('portal')

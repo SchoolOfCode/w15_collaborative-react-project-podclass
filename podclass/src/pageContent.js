@@ -39,3 +39,10 @@ export const titles = [
   "Marketing",
   "My'PodList'",
 ];
+
+export const checklistItems = [
+"checklist item 1",
+"checklist item 2",
+"checklist item 3",
+"checklist item 4",
+];
