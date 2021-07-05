@@ -6,6 +6,7 @@ import Button from "../src/components/Button";
 import Heading1 from "../src/components/h1";
 import Main from "../src/components/Main";
 import Display from "./components/Display";
+import List from "./components/List";
 
 function App() {
   const [content, setContent] = useState([contentData]);
@@ -16,6 +17,7 @@ function App() {
     setContentState(key);
     console.log("hello", contentState);
   }
+  console.log("this is contentData", contentData);
 
   return (
     /* contentData.map((contentData) => {
