@@ -39,3 +39,7 @@
 buttons {
   color: pink;
 }
+a {
+  color: purple;
+  text-decoration: underline;
+}

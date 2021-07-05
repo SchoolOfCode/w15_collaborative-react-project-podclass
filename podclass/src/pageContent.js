@@ -15,6 +15,8 @@ export const contentData = [
       `this is about name ${listItems[1]} ${listItems[2]}`,
     ],
     images: ["getting started 1", "getting started2"],
+
+    lists: ["create name for podcast", "make a picture", "record"],
   },
   {
     id: 2,
@@ -22,6 +24,7 @@ export const contentData = [
     subheadings: ["Intro", "Main Content", "Outro"],
     textContent: ["this is intro", "this is main", "this is outro"],
     images: [["content 1"]],
+    lists: ["flowers", "rainbow", "sugar"],
   },
 ];
 

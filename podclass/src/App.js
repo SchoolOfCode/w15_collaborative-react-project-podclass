@@ -6,7 +6,7 @@ import Button from "../src/components/Button";
 import Heading1 from "../src/components/h1";
 import Main from "../src/components/Main";
 import Display from "./components/Display";
-
+import List from "./components/List";
 import Modal from "./Modal/Modal";
 
 
@@ -15,7 +15,8 @@ function App() {
     position: 'relative',
     zIndex: 1,
   }
-  
+  console.log("this is contentData", contentData);
+ 
 const [isOpen, setIsOpen] = React.useState(false)
 const [content, setContent] = useState([contentData]);
 const [contentState, setContentState] = useState("");
