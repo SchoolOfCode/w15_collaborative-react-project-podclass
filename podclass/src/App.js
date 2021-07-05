@@ -4,7 +4,7 @@ import "./App.css";
 import { contentData, titles } from "./pageContent";
 import Button from "../src/components/Button";
 import Heading1 from "../src/components/h1";
-import Main from "../src/components/Main";
+// import Main from "../src/components/Main";
 import Display from "./components/Display";
 import List from "./components/List";
 import Modal from "./Modal/Modal";
@@ -20,6 +20,7 @@ function App() {
 const [isOpen, setIsOpen] = React.useState(false)
 const [content, setContent] = useState([contentData]);
 const [contentState, setContentState] = useState("");
+const listItem = ["item 1", "item 2", "item 3"];
     /* contentData.map((contentData) => {
       <p key={`${contentData.id}`}>{contentData.header} </p>}); */    
  function changeState(key) {
@@ -63,6 +64,9 @@ const [contentState, setContentState] = useState("");
             (content) => content.id === contentState + 1
           )}
         />
+      </div>
+      <div>
+        <List value={listItem}/>
       </div>
     </div>
 

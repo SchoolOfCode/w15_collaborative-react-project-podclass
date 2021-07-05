@@ -1,14 +1,14 @@
 const List = ({ listItem }) => {
   // if (!listItem.length===0)
-  {
+  
     console.log(listItem);
     return (
       <li>
-        <a>{listItem}</a>
+        {listItem} "list item"
       </li>
-    );
-  }
-  return console.log("false");
+    )
+
+//   return console.log("false");
 };
 
 export default List;
