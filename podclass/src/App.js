@@ -1,9 +1,11 @@
 import React from "react";
-// import {useState} from "react";
-import './App.css';
-import {titles} from "./pageContent";
+import { useState } from "react";
+import "./App.css";
+import { contentData, titles } from "./pageContent";
 import Button from "../src/components/Button";
 import Heading1 from "../src/components/h1";
+import Main from "../src/components/Main";
+import Display from "./components/Display";
 
 import Modal from "./Modal/Modal";
 
@@ -13,6 +15,7 @@ const buttonWrapperStyles = {
 }
 
 function App() {
+
   const [isOpen, setIsOpen] = React.useState(false)
   return (
     /* contentData.map((contentData) => {
@@ -27,18 +30,47 @@ function App() {
         Checklist is done, we love to see it
       </Modal>
    </div>
-   
-   <div>
-    {titles.map(
-        (button) => (button = <Button key={button} buttonName={button} />)
-      )}
- 
+    
+  const [content, setContent] = useState([contentData]);
+
+  const [contentState, setContentState] = useState("");
+
+  function changeState(key) {
+    setContentState(key);
+    console.log("hello", contentState);
+  }
+
+     <div>
       {titles.map(
-        (heading) => (heading = <Heading1 key={heading} mainHeading={heading} />)
+        (button) =>
+          (button = (
+            <Button
+              key={button}
+              buttonName={button}
+              identity={changeState}
+              identityNumber={titles.indexOf(`${button}`)}
+            />
+          ))
       )}
+
+      {titles.map(
+        (heading) =>
+          (heading = <Heading1 key={heading} mainHeading={heading} />)
+      )}
+
+      <div className="content">
+        <Display
+          content={contentData.filter(
+            (content) => content.id === contentState + 1
+          )}
+        />
+      </div>
     </div>
+
     </>
-  )
+
+  );
+
 }
 
 export default App;
