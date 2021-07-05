@@ -1,12 +1,18 @@
+export const listItems = [
+    "what's your name?",
+    "what's your topic?",
+    "I hate Sundays"
+    ]
+
 export const contentData = [
   {
     id: 1,
     header: "Getting started",
     subheadings: ["Category and Topic", "Format", "Name"],
     textContent: [
-      "this is about category and topic",
+      `this is about category and topic ${listItems[0]}`,
       "this is about format",
-      "this is about name",
+      `this is about name ${listItems[1]} ${listItems[2]}`,
     ],
     images: ["getting started 1", "getting started2"],
 

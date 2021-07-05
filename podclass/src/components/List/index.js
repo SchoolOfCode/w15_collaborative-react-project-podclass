@@ -14,4 +14,4 @@ const List = ({ listItem }) => {
 export default List;
 
 //filter through list array
-//if item.legnth >0 create lists
+//if item.legnth >0 create list

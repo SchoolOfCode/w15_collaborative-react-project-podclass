@@ -1,6 +1,6 @@
+PLAN FOR CHECKLIST
 
-
-
+define a element of text in the display as an 
 
 
 
