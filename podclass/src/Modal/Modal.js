@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import List from "../components/List"
-import { contentData } from '../pageContent';
+import { contentData } from '../../src/pageContent';
 import Display from '../components/Display';
+import Checklist from '../components/Checklist';
+import useState from "react";
 
 const modalStyles = {
     position: 'fixed',
@@ -24,8 +26,17 @@ const overlayStyle = {
     zIndex: 1000
 }
 
+
 export default function Modal({open, children, onClose}){
-    if (!open) return null
+    
+//  const [checklistItemStatus, setChecklistItemStatus] = useState ("displayList") 
+  if (!open) return null
+
+    // function checklistItemDone ({checklistItemStatus}) {
+    //     if ({checklistItemStatus} !== "displayListItem") {
+    //     setChecklistItemStatus("completedListItem");
+    //     console.log (checklistItemStatus)};
+    //     }
 
     return ReactDom.createPortal(
         <>
@@ -34,9 +45,12 @@ export default function Modal({open, children, onClose}){
         <button onClick={onClose}>Close</button>
             {children}
         <p>some text here</p>
-        <Display content={"hi"}/>
+        <Checklist 
+        // onClick={checklistItemDone} className={checklistItemStatus}
+        />
         </div>
         </>,
         document.getElementById('portal')
-    );
-}
+    )
+ }
+ 
