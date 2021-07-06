@@ -8,6 +8,7 @@ import Heading1 from "../src/components/h1";
 import Display from "./components/Display";
 import List from "./components/List";
 import Modal from "./Modal/Modal";
+import Checklist from "../src/components/Checklist";
 
 
 function App() {
@@ -15,13 +16,53 @@ function App() {
     position: 'relative',
     zIndex: 1,
   }
-  console.log("this is contentData", contentData);
- 
+  // console.log("this is contentData", contentData);
 const [isOpen, setIsOpen] = React.useState(false)
-const [content, setContent] = useState([contentData]);
+const [content, setContent] = useState(contentData);
 const [contentState, setContentState] = useState("");
 const listItem = ["item 1", "item 2", "item 3"];
 const [buttonClass, setButtonClass] = useState ("nav-button");
+  // const [checklist, setChecklist] = useState([]);
+  // const [checklistItemStatus, setChecklistItemStatus] = useState ("display-list-item") 
+
+  const selectedItems = content.reduce((acc, item)=>{
+    item.sections.forEach((section)=>{
+      section.checklist.forEach((checklistItem)=> {
+        console.log("checklist item ", checklistItem);
+        if (checklistItem.selected) {
+          acc.push(checklistItem);
+          }
+      } )
+    });
+    return acc
+    } ,[]
+  )
+  console.log("this is the selected items array ", selectedItems);
+
+  function handleChecklistItemClick (topicId, sectionId, checklistId) {
+   console.log(topicId, sectionId, checklistId)
+    /* check if item exists in checklist */
+    // setChecklist((checklist)=>[...checklist,item])
+    // console.log("this is ", item);
+    setContent ((content)=> {
+      const topicIndex = content.findIndex((topic)=> topic.id === topicId);
+      const topicToUpdate = content[topicIndex];
+      const sectionIndex = topicToUpdate.sections.findIndex((section)=>section.key === sectionId)
+      const sectionToUpdate = topicToUpdate.sections[sectionIndex];
+      const checklistIndex = sectionToUpdate.checklist.findIndex((checklistItem)=>checklistItem.key === checklistId);
+      const itemToUpdate = sectionToUpdate.checklist[checklistIndex];
+      const updatedChecklistItem = {...itemToUpdate, selected: !itemToUpdate.selected};
+      const updatedChecklist = [...sectionToUpdate.checklist.slice(0,checklistIndex),updatedChecklistItem,...sectionToUpdate.checklist.slice(checklistIndex+1)];
+      const updatedSection = {...sectionToUpdate, checklist:updatedChecklist};
+      const updatedSections = [...topicToUpdate.sections.slice(0,sectionIndex), updatedSection, ...topicToUpdate.sections.slice(sectionIndex+1)]
+      const updatedTopic = {...topicToUpdate, sections:updatedSections};
+      const checkUpdate = [...content.slice(0,topicIndex), updatedTopic, ...content.slice(topicIndex+1)];
+      console.log("checking the updated array ", checkUpdate);
+      return checkUpdate
+    })
+    }
+
+
 console.log("this is the class", buttonClass);
     /* contentData.map((contentData) => {
       <p key={`${contentData.id}`}>{contentData.header} </p>}); */    
@@ -71,14 +112,14 @@ function changeButtonClass (){
       )}
 
       <div className="content">
-        <Display
-          content={contentData.filter(
+        <Display addChecklistItem = {handleChecklistItemClick}
+          content={content.filter(
             (content) => content.id === contentState + 1
           )}
         />
       </div>
       <div>
-        <List value={listItem}/>
+        <Checklist items={selectedItems}/>
       </div>
     </div>
 

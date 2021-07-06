@@ -1,20 +1,15 @@
 import React from "react";
+import { listItems } from "../../pageContent";
 // import Modal from "../../Modal/Modal";
 // import {checklistItems} from ;
 
 
-function Checklist ({onClick, className}) {
-
-    const checklistItems = [
-        "checklist item 1",
-        "checklist item 2",
-        "checklist item 3",
-        "checklist item 4",
-        "hello painty vik"
-        ];
-
-    return (
-    checklistItems.map((item) => (item = <li onClick={onClick} >{item}</li>))    
+function Checklist ({items}) {
+console.log ("this is items from checklist component ", items)
+        return (         
+        <ul>
+        {items.map((item) => (<li key={item.key}>{item.text}</li>))}    
+        </ul>
     )
 }
 

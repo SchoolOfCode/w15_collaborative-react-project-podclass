@@ -83,3 +83,10 @@ a {
   border: 2px solid #FF0000;
   box-shadow: 0 0 15px #FF0000, 0 0 10px #FF004C;
 }
+.display-list-item {
+  text-decoration-line: none;
+}
+
+.completed-list-item {
+  text-decoration-line: line-through;
+}
