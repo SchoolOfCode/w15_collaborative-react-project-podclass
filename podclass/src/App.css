@@ -54,8 +54,8 @@ a {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 8px;
-  border: 2px solid #DEFFFF;
-  box-shadow: 0 0 15px #00FFFF, 0 0 10px #00D9FF;
+  border: 2px solid #deffff;
+  box-shadow: 0 0 15px #00ffff, 0 0 10px #00d9ff;
 }
 .nav-button:hover {
   background-color: rgba(255, 255, 255, 0.995);
@@ -67,12 +67,12 @@ a {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 8px;
-  border: 2px solid #FDD7C5;
-  box-shadow: 0 0 15px #FF5E00, 0 0 10px #FF4800;
+  border: 2px solid #fdd7c5;
+  box-shadow: 0 0 15px #ff5e00, 0 0 10px #ff4800;
 }
 .nav-button-clicked {
   background-color: rgba(20, 0, 0, 0.794);
-  color: #FF0000;
+  color: #ff0000;
   padding: 15px 32px;
   text-align: center;
   /* display: inline-block; */
@@ -80,8 +80,8 @@ a {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 8px;
-  border: 2px solid #FF0000;
-  box-shadow: 0 0 15px #FF0000, 0 0 10px #FF004C;
+  border: 2px solid #ff0000;
+  box-shadow: 0 0 15px #ff0000, 0 0 10px #ff004c;
 }
 .display-list-item {
   text-decoration-line: none;
@@ -92,8 +92,8 @@ a {
 }
 
 #navigation {
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-border: green;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
