@@ -5,7 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: black;
+
+
+  position: relative;
+  z-index: 999;
+  border: 1px solid red;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+
+  box-sizing: border-box;
+
+  border: 3px solid blue;
+  box-shadow: 0 0 1px lightblue, 0 0 6px lightblue, 0 0 6px lightblue, 0 0 12px lightblue, inset 0 0 1px lightblue, inset 0 0 2px lightblue, inset 0 0 6px lightblue, inset 0 0 12px lightblue;
+
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -13,5 +30,16 @@ code {
 }
 
 button {
-  color: pink;
+  background-color: black;
+  color: red;
+  border: 2px solid red;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
 }
+
+

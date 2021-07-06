@@ -1,16 +1,20 @@
 * {
   font-size: large;
+  
+
 }
-buttons {
-  color: red;
-}
+
 a {
   color: red;
   text-decoration: underline;
+
 }
 
 .overlay{
   text-align: right;
+  justify-content: right;
   font-size: small;
   color: red;
+
 }
+

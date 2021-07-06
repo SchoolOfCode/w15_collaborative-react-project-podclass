@@ -43,7 +43,7 @@ const [contentState, setContentState] = useState("");
       {titles.map(
         (button) =>
           (button = (
-            <Button
+            <Button className="contentButtons"
               key={button}
               buttonName={button}
               identity={changeState}
