@@ -90,7 +90,9 @@ return (
    </div>  
   
  
-     <div>
+     <div 
+     id={"navigation"}
+     >
     {titles.map(
         (button) => (button = (<Button
           key={button}

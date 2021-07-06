@@ -49,7 +49,7 @@ a {
   color: rgb(0, 0, 20);
   padding: 15px 32px;
   text-align: center;
-  display: inline-block;
+  /* display: inline-block; */
   font-size: 20px;
   margin: 4px 2px;
   cursor: pointer;
@@ -62,7 +62,7 @@ a {
   color: rgb(20, 8, 0);
   padding: 15px 32px;
   text-align: center;
-  display: inline-block;
+  /* display: inline-block; */
   font-size: 20px;
   margin: 4px 2px;
   cursor: pointer;
@@ -75,7 +75,7 @@ a {
   color: #FF0000;
   padding: 15px 32px;
   text-align: center;
-  display: inline-block;
+  /* display: inline-block; */
   font-size: 20px;
   margin: 4px 2px;
   cursor: pointer;
@@ -89,4 +89,11 @@ a {
 
 .completed-list-item {
   text-decoration-line: line-through;
+}
+
+#navigation {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+border: green;  
 }
