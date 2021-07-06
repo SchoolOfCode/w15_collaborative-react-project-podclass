@@ -6,7 +6,7 @@ const modalStyles = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    backgroundColor: '4fff',
+    backgroundColor: '#ffff',
     padding: '50px',
     zIndex: 1000
 }

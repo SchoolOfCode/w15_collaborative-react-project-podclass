@@ -28,7 +28,7 @@ const [contentState, setContentState] = useState("");
       }
       return (  
 <>
-   <div style={buttonWrapperStyles}>
+   <div style={buttonWrapperStyles} className="overlay">
       <button onClick={()=> setIsOpen(true)}>
         Checklist
       </button>
@@ -39,7 +39,7 @@ const [contentState, setContentState] = useState("");
    </div>  
   
   
-     <div>
+     <div >
       {titles.map(
         (button) =>
           (button = (
