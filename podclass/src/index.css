@@ -5,13 +5,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Vic+ */
+  background-color: black;
+  background-image: url("./Images/PNGBackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* potentially remove the one below */
+  background-attachment: fixed;
+  /* Vic+ */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+* {
+  color: whitesmoke;
+}
 button {
   color: pink;
 }
