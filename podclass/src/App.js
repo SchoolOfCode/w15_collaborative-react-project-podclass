@@ -12,11 +12,10 @@ import Checklist from "../src/components/Checklist";
 
 
 function App() {
-  const buttonWrapperStyles = {
-    position: 'relative',
-    zIndex: 1,
-  }
-
+  // const buttonWrapperStyles = {
+  //   position: 'relative',
+  //   zIndex: 1,
+  // }
 
 const [isOpen, setIsOpen] = React.useState(false)
 const [content, setContent] = useState(contentData);
@@ -78,13 +77,13 @@ function changeButtonClass (){
       
 return (  
 <>
-   <div style={buttonWrapperStyles}>
-      <button onClick={()=> {
+   <div>
+      {/* <button className={buttonClass} onClick={()=> {
         setIsOpen(true);
        }}>
-        Checklist
-      </button>
-
+        My PodList
+      </button> */}
+       
       <Modal open={isOpen} onClose={() => setIsOpen(false) }>
         Checklist is done, we love to see it
       </Modal>
@@ -104,6 +103,11 @@ return (
          ))
       )
     }
+    <button className={buttonClass} onClick={()=> {
+        setIsOpen(true);
+       }}>
+        My PodList
+      </button>
 
       {titles.map(
         (heading) =>

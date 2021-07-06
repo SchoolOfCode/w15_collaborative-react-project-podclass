@@ -64,7 +64,6 @@ export const titles = [
   "Editing the audio",
   "Getting it out there",
   "Marketing",
-  "My'PodList'",
 ];
 
 export const checklistItems = [
