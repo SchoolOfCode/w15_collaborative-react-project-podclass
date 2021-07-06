@@ -6,7 +6,7 @@ import Button from "../src/components/Button";
 import Heading1 from "../src/components/h1";
 // import Main from "../src/components/Main";
 import Display from "./components/Display";
-import List from "./components/List";
+// import List from "./components/List";
 import Modal from "./Modal/Modal";
 import Checklist from "../src/components/Checklist";
 
@@ -16,16 +16,17 @@ function App() {
     position: 'relative',
     zIndex: 1,
   }
-  // console.log("this is contentData", contentData);
+
+
 const [isOpen, setIsOpen] = React.useState(false)
 const [content, setContent] = useState(contentData);
 const [contentState, setContentState] = useState("");
-const listItem = ["item 1", "item 2", "item 3"];
+// const listItem = ["item 1", "item 2", "item 3"];
 const [buttonClass, setButtonClass] = useState ("nav-button");
   // const [checklist, setChecklist] = useState([]);
   // const [checklistItemStatus, setChecklistItemStatus] = useState ("display-list-item") 
-
-  const selectedItems = content.reduce((acc, item)=>{
+  
+const selectedItems = content.reduce((acc, item)=>{
     item.sections.forEach((section)=>{
       section.checklist.forEach((checklistItem)=> {
         console.log("checklist item ", checklistItem);
@@ -37,14 +38,12 @@ const [buttonClass, setButtonClass] = useState ("nav-button");
     return acc
     } ,[]
   )
+
   console.log("this is the selected items array ", selectedItems);
 
   function handleChecklistItemClick (topicId, sectionId, checklistId) {
    console.log(topicId, sectionId, checklistId)
-    /* check if item exists in checklist */
-    // setChecklist((checklist)=>[...checklist,item])
-    // console.log("this is ", item);
-    setContent ((content)=> {
+   setContent ((content)=> {
       const topicIndex = content.findIndex((topic)=> topic.id === topicId);
       const topicToUpdate = content[topicIndex];
       const sectionIndex = topicToUpdate.sections.findIndex((section)=>section.key === sectionId)
@@ -64,19 +63,20 @@ const [buttonClass, setButtonClass] = useState ("nav-button");
 
 
 console.log("this is the class", buttonClass);
-    /* contentData.map((contentData) => {
-      <p key={`${contentData.id}`}>{contentData.header} </p>}); */    
+
  function changeState(key) {
         setContentState(key);
         console.log("hello", contentState);
       }
+
 function changeButtonClass (){
-  if (buttonClass === "nav-button") {
+    if (buttonClass === "nav-button") {
     setButtonClass("nav-button-clicked");
     console.log("class changed");
+    }
   }
-}
-      return (  
+      
+return (  
 <>
    <div style={buttonWrapperStyles}>
       <button onClick={()=> {
@@ -92,19 +92,18 @@ function changeButtonClass (){
   
  
      <div>
-      {titles.map(
-        (button) =>
-          (button = (
-            <Button
-              key={button}
-              buttonName={button}
-              identity={changeState}
-              identityNumber={titles.indexOf(`${button}`)}
-              className={buttonClass}
-              onClick={changeButtonClass}
-            />
-          ))
-      )}
+    {titles.map(
+        (button) => (button = (<Button
+          key={button}
+          buttonName={button}
+          identity={changeState}
+          identityNumber={titles.indexOf(`${button}`)}
+          className={buttonClass}
+          onClick={changeButtonClass}
+          />
+         ))
+      )
+    }
 
       {titles.map(
         (heading) =>
@@ -130,3 +129,4 @@ function changeButtonClass (){
 }
 
 export default App;
+

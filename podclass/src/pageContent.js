@@ -25,8 +25,8 @@ export const contentData = [
                 subheading:"Category and Topic", 
                 textContent: "this is about category and topic" ,
                 image: "xx",
-                checklist: [{key: "1.1.1", text:"checklist 1.1", selected: false},
-                            {key: "1.1.2", text:"checklist 1.2", selected: false}]
+                checklist: [{key: "1.1.1", text:"checklist 1.1.1", selected: false},
+                            {key: "1.1.2", text:"checklist 1.1.2", selected: false}]
                 },
                 {key: "1.2",
                 subheading:"Format", 
