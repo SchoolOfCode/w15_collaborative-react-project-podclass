@@ -97,3 +97,28 @@ a {
   align-items: center;
   justify-content: center;
 }
+
+.ButtonSeperator {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 20px;
+  bottom: 110px;
+}
+
+/* .content {
+  display: flex;
+  flex-direction: column;
+  flex: center;
+  position: relative;
+  left: 120px;
+  top: 60px;
+  border: solid white;
+  min-height: 50vh;
+  min-width: 50vw;
+  max-height: 50vh;
+  overflow: scroll;
+  margin: auto;
+  padding: 20px 20px 20px;
+} */
+/*div to only appear if there is content*/
