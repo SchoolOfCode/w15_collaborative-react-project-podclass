@@ -22,13 +22,16 @@ function Api({ search }) {
       );
       let data = await response.json();
       console.log("this is data", data);
-      setEquipmentSearch(equipmentSearch);
+      console.log(data.result[0].title)
+      setEquipmentSearch(data);
+      console.log("this is equipmentSearch", equipmentSearch);
     }
     getEquipment(search);
-  }, []);
+}, [search]);
 
-  return "hello";
+return "bollocks to this"
 }
+
 
 export default Api;
 
