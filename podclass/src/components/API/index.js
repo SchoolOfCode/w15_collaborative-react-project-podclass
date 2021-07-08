@@ -8,9 +8,10 @@ function App(){
                 "headers": {
                     "x-rapidapi-key": "855aee439dmshaa3857cc3a43bdap1d39e3jsn5f8f4aa03352",
                     "x-rapidapi-host": "amazon23.p.rapidapi.com"
-            )}
-            })`
+                }
+            }
+            )
         }
 
-    }
+    })
 }
