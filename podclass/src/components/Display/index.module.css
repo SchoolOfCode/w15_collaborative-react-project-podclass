@@ -8,9 +8,8 @@
   border: solid white;
   min-height: 80vh;
   min-width: 70vw;
-  max-height: 90vh;
   max-width: 70vh;
-  overflow: scroll;
+  overflow: visible;
   margin: auto;
   padding: 20px 20px 20px;
   white-space: pre-wrap;
