@@ -9,7 +9,7 @@ import Display from "./components/Display";
 // import List from "./components/List";
 import Modal from "./Modal/Modal";
 import Checklist from "../src/components/Checklist";
-import Api from "../src/App";
+import Api from "../src/components/API";
 
 function App() {
   // const buttonWrapperStyles = {
@@ -95,16 +95,15 @@ function App() {
     }
   }
 
-  <Api search={"podcast%20mic"}/>
   return (
     <>
+      <Api />
       <div>
         {/* <button className={buttonClass} onClick={()=> {
         setIsOpen(true);
        }}>
         My PodList
       </button> */}
-
 
         <Modal open={isOpen} onClose={() => setIsOpen(false)}>
           Checklist is done, we love to see it
