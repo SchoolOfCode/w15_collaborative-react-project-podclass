@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
-// import Checklist from '../components/Checklist';
+import Checklist from '../components/Checklist';
 
 const modalStyles = {
     position: 'fixed',
@@ -25,7 +25,7 @@ const overlayStyle = {
 }
 
 
-export default function Modal({open, children, onClose}){
+export default function Modal({open, children, onClose, selectedItems}){
     console.log({open, children, onClose});
  
   if (!open) return null
@@ -38,6 +38,7 @@ export default function Modal({open, children, onClose}){
             {children}
         <p>some text here</p>
 {/*   checklist component to be rendered here */}
+        {/* <Checklist items = {selectedItems}/> */}
         </div>
         </>,
         document.getElementById('portal')

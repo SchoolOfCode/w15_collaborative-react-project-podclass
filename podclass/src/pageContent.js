@@ -23,7 +23,7 @@ export const contentData = [
     header: "Getting started with new data",
     sections: [{key: "1.1",
                 subheading:"Category and Topic", 
-                textContent: "this is about category and topic" ,
+                textContent: "The first thing to think about when looking to create your podcast is your topic, or subject. \n\n Pick something related to your \n\u2022 interests, \n\u2022 hobbies or anything that you’re passionate about. This way the conversation will be sure to flow…If you are feeling stuck, maybe use Quora or Twitter Explore to spark up topic ideas. Twitter Explore includes trending topics, which might be handing when thinking about attracting new audiences. Another approach is to think about your “USP” (unique selling point).  What topic might help you stand out from what is already on offer?" ,
                 image: "xx",
                 checklist: [{key: "1.1.1", text:"checklist 1.1.1", selected: false},
                             {key: "1.1.2", text:"checklist 1.1.2", selected: false}]

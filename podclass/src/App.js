@@ -105,6 +105,7 @@ function App() {
 
         <Modal open={isOpen} onClose={() => setIsOpen(false)}>
           Checklist is done, we love to see it
+          <Checklist items={selectedItems} />
         </Modal>
       </div>
 
