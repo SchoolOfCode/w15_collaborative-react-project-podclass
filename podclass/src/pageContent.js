@@ -1,8 +1,10 @@
+import Button from "./components/Button";
 export const listItems = [
     "what's your name?",
     "what's your topic?",
     "I hate Sundays"
     ]
+export let searchItem = "";
 
 export const contentData = [
   {
@@ -89,7 +91,7 @@ export const contentData = [
                 {key: "4.3",
                 subheading: "Microphones",
                 textContent: "You can use your computer's built in microphone but the easiest way to get a higher quality sound is to use a USB microphone. \n\n You can search for Amazon examples here:",
-                image: "",
+                image: <Button className="nav-button" />,
                 checklist: [{key: "4.3.1", text:"get USB microphone", selected: false}]
                 },
                 {key: "4.4",
