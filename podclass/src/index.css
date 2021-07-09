@@ -23,3 +23,23 @@ code {
   color: whitesmoke;
 }
 
+.checklist-item-content {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checklist-item {
+  list-style-type: none;
+  padding: 20px;
+  margin: 0;
+  color:hotpink
+}
+
+.checklist-item-done {
+  list-style-type: none;
+  padding: 20px;
+  margin: 0;
+  text-decoration: line-through;
+  color: red
+}

@@ -17,6 +17,7 @@ const Display = ({ content, addChecklistItem }) => {
               <ul>
                 {section.checklist.map((checklistItem) => (
                   <li
+                    className="checklist-item-content"
                     key={checklistItem.key}
                     onClick={() =>
                       addChecklistItem(item.id, section.key, checklistItem.key)

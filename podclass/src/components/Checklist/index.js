@@ -4,7 +4,7 @@ function Checklist ({items}) {
 // console.log ("this is items from checklist component ",)
         return (         
         <ul>
-        {items.map((item) => (<li key={item.key}>{item.text} <button>+/- PodList</button></li>))}    
+        {items.map((item) => (<li className="checklist-item-done" key={item.key}> <button className="podlist-button">+/- PodList</button>{item.text}</li>))}    
         </ul>
     )
 }
