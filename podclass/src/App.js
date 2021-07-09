@@ -154,9 +154,6 @@ function App() {
           />
         </div>
       </div>
-      <div>
-        <Checklist items={selectedItems} />
-      </div>
     </>
   );
 }

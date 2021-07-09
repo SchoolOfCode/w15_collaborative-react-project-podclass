@@ -29,9 +29,9 @@ export const contentData = [
                 subheading: "Your podcast name",
                 textContent: "Already have an idea for your podcast name? Enter it here: \n\nMake sure your chosen podcast name is \n\n\u0009\u2022 easy to pronounce \n\u0009\u2022 easy to type into a search engine (no more than 20 characters \n\u0009\u2022 easy to spell \n\u0009\u2022 isn't already taken! \n\nYou might also want to check if the domain name (website address) of your podcast name is available - think future marketing!",
                 image: "",
-                checklist: [{key: "1.3.1", text:"decide on my podcast name", selected:false},
-                            {key: "1.3.2", text:"check name is available", selected: false},
-                            {key: "1.3.3", text:"check domain name is available", selected:false}]
+                checklist: [{key: "1.3.1", text:" \u2710  decide on my podcast name", selected:false},
+                            {key: "1.3.2", text:" \u2710 check name is available", selected: false},
+                            {key: "1.3.3", text:"\u2710 check domain name is available", selected:false}]
                 }
     ]
   },

@@ -23,17 +23,26 @@ code {
   color: whitesmoke;
 }
 
-/* .checklist-item-content {
+.checklist-item-content {
   list-style-type: none;
   padding: 0;
   margin: 0;
-} */
+  font-weight: bold;
+  text-decoration: underline;  
+}
+
+.checklist-item-content:hover {
+  transform: scale(1.2);
+  transform-origin: left;
+  cursor: pointer
+}
 
 .checklist-item {
   list-style-type: none;
   padding: 20px;
   margin: 0;
   color:hotpink
+  
 }
 
 .checklist-item-done {
