@@ -5,8 +5,10 @@ import { useEffect, useState } from "react";
 // - call the API component and hand down a prop of search
 // run the API fetch function, create the html elements and hand back App
 
-function Api({ search }) {
-  const [equipmentSearch, setEquipmentSearch] = useState({});
+function Api() {
+  const [equipmentSearch, setEquipmentSearch] = useState("");
+  const [equipmentURL, setEquipmentURL] = useState("");
+  const [equipmentImage, setEquipmentImage] = useState("");
   useEffect(() => {
     async function getEquipment() {
       const response = await fetch(
@@ -21,27 +23,28 @@ function Api({ search }) {
         }
       );
       let data = await response.json();
-      console.log("this is data", data);
-      console.log(data.result[0].title)
-      setEquipmentSearch(data);
-      console.log("this is equipmentSearch", equipmentSearch);
+      setEquipmentSearch(data.result[0].title);
+      console.log("Nancy", equipmentSearch);
+      setEquipmentURL(data.result[0].url);
+      setEquipmentImage(data.result[0].thumbnail);
     }
-    getEquipment(search);
-}, [search]);
+    getEquipment();
+  }, []);
 
-return (
-    (equipmentSearch.length > 0 ? (
+  return (
     <div>
-    <p>{equipmentSearch.result[0].title}</p>
-    <p>{equipmentSearch.result[0].url} </p>
-    <p>{equipmentSearch.result[0].price.current_price}</p>
-    <img>{equipmentSearch.result[0].thumbnail}</img>
-    </div> ) :
-    (
-    <div> loading </div>
-    )   
-    )
-    )
-    }
+      {console.log("Nancy", equipmentSearch)}
+      <p>{equipmentSearch}</p>
+      <a href={equipmentURL}>
+        <img src={`${equipmentImage}`} alt="" />
+      </a>
+      <img></img>
+      {/* <p>{equipmentSearch[0].url} </p>
+      <p>{equipmentSearch[0].price.current_price}</p>
+      <img>{equipmentSearch[0].thumbnail}</img> */}
+      <div> loading </div>
+    </div>
+  );
+}
 
 export default Api;

@@ -97,7 +97,7 @@ function App() {
 
   return (
     <>
-      <Api/>
+      <Api />
       <div>
         {/* <button className={buttonClass} onClick={()=> {
         setIsOpen(true);
