@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -42,4 +42,83 @@ buttons {
 a {
   color: purple;
   text-decoration: underline;
+} */
+
+.nav-button {
+  background-color: rgba(255, 255, 255, 0.995);
+  color: rgb(0, 0, 20);
+  padding: 15px 32px;
+  text-align: center;
+  /* display: inline-block; */
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #deffff;
+  box-shadow: 0 0 15px #00ffff, 0 0 10px #00d9ff;
 }
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.995);
+  color: rgb(20, 8, 0);
+  padding: 15px 32px;
+  text-align: center;
+  /* display: inline-block; */
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #fdd7c5;
+  box-shadow: 0 0 15px #ff5e00, 0 0 10px #ff4800;
+}
+.nav-button-clicked {
+  background-color: rgba(20, 0, 0, 0.794);
+  color: #ff0000;
+  padding: 15px 32px;
+  text-align: center;
+  /* display: inline-block; */
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #ff0000;
+  box-shadow: 0 0 15px #ff0000, 0 0 10px #ff004c;
+}
+.display-list-item {
+  text-decoration-line: none;
+}
+
+.completed-list-item {
+  text-decoration-line: line-through;
+}
+
+#navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ButtonSeperator {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 20px;
+  bottom: 110px;
+}
+
+/* .content {
+  display: flex;
+  flex-direction: column;
+  flex: center;
+  position: relative;
+  left: 120px;
+  top: 60px;
+  border: solid white;
+  min-height: 50vh;
+  min-width: 50vw;
+  max-height: 50vh;
+  overflow: scroll;
+  margin: auto;
+  padding: 20px 20px 20px;
+} */
+/*div to only appear if there is content*/
