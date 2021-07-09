@@ -1,12 +1,24 @@
 import React from "react";
+import {useState} from "react";
 
 function Checklist ({items}) {
-// console.log ("this is items from checklist component ",)
-        return (         
+const [checklistLiClass, setChecklistLiClass] = useState("checklist-item");
+
+    function changeChecklistLiClass() {
+        console.log("what the fuck");
+        (checklistLiClass === "checklist-item") ?  
+                setChecklistLiClass("checklist-item-done") :          
+                setChecklistLiClass("checklist-item")
+      }
+            
+    return (   
         <ul>
-        {items.map((item) => (<li className="checklist-item-done" key={item.key}> <button className="podlist-button">+/- PodList</button>{item.text}</li>))}    
+        {items.map((item) => (<li className={checklistLiClass} key={item.key} onClick={changeChecklistLiClass}> <button className="podlist-button" >+/- PodList</button>
+        {item.text}
+        </li>))}
+        {console.log("checklist class ", {checklistLiClass}) }
         </ul>
     )
-}
+} 
 
 export default Checklist

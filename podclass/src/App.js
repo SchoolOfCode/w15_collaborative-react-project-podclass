@@ -21,6 +21,7 @@ function App() {
   const [content, setContent] = useState(contentData);
   const [contentState, setContentState] = useState("");
   // const listItem = ["item 1", "item 2", "item 3"];
+  
   const [buttonClass, setButtonClass] = useState("nav-button");
   // const [checklist, setChecklist] = useState([]);
   // const [checklistItemStatus, setChecklistItemStatus] = useState ("display-list-item")
@@ -38,6 +39,10 @@ function App() {
   }, []);
 
   console.log("this is the selected items array ", selectedItems);
+
+
+
+
 
   function handleChecklistItemClick(topicId, sectionId, checklistId) {
     console.log(topicId, sectionId, checklistId);
@@ -81,7 +86,6 @@ function App() {
     });
   }
 
-  console.log("this is the class", buttonClass);
 
   function changeState(key) {
     setContentState(key);
@@ -94,7 +98,6 @@ function App() {
       console.log("class changed");
     }
   }
-
   return (
     <>
       {/* <Api/> */}

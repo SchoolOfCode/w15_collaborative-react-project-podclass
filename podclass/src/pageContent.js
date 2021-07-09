@@ -128,7 +128,7 @@ export const contentData = [
                 textContent: "If you want to go with the traditional vibe and record your Podcast in an audio format then: \n\n\u0009\u2013 For Windows: Audacity is a free, easy-to-use, multi-track audio editor and recording application software. \n\u0009\u2013 For Mac: GarageBand is ideal! You could describe it as a line of digital audio workstations for macOS, iPadOS, and iOS devices that allows users to create music or podcasts.  It’s already installed on your device." ,
                 image: "",
                 checklist: [{key: "5.2.1", text:"download Audacity", selected: false},
-                            {key: "5.2.1", text:"checkout GarageBand", selected: false}]
+                            {key: "5.2.2", text:"checkout GarageBand", selected: false}]
                 },
                 {key: "5.3",
                 subheading: "Video",

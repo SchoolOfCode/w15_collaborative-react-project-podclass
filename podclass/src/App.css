@@ -125,3 +125,17 @@
   border: 2px solid #fdd7c5;
   box-shadow: 0 0 15px #ff5e00, 0 0 10px #ff4800;
 }
+.checklist-item {
+  list-style-type: none;
+  padding: 20px;
+  margin: 0;
+  color:hotpink
+}
+
+.checklist-item-done {
+  list-style-type: none;
+  padding: 20px;
+  margin: 0;
+  text-decoration: line-through;
+  color: red
+}

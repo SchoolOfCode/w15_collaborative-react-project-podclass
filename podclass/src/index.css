@@ -23,11 +23,11 @@ code {
   color: whitesmoke;
 }
 
-.checklist-item-content {
+/* .checklist-item-content {
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
+} */
 
 .checklist-item {
   list-style-type: none;
