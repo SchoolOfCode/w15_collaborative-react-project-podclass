@@ -5,7 +5,13 @@
   position: relative;
   left: 120px;
   top: 60px;
-  border: solid white;
+  /* Vic+Changes */
+  background-color: rgba(0, 5, 20, 0.4);
+  border: 4.5px solid #deffff;
+  box-shadow: 0 0 20px #00ffff, 0 0 15px #00d9ff, inset 0 0 15px #00ffff;
+  border-radius: 8px;
+  text-align: justify;
+  /* Vic+Changes */
   min-height: 80vh;
   min-width: 70vw;
   max-width: 70vh;
@@ -14,4 +20,3 @@
   padding: 20px 20px 20px;
   white-space: pre-wrap;
 }
-
