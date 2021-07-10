@@ -25,8 +25,7 @@ const overlayStyle = {
 
 
 export default function Modal({open, children, onClose, selectedItems}){
-    console.log({open, children, onClose});
- 
+     
   if (!open) return null
 
     return ReactDom.createPortal(

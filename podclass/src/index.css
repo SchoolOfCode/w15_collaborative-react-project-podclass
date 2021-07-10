@@ -37,27 +37,13 @@ code {
   padding: 0;
   margin: 0;
   /* font-style: italic; */
-  text-decoration: underline;  
+  text-decoration: underline;
+  text-decoration-color:#00FFFF ;  
 }
 
 .checklist-item-content:hover {
   transform: scale(1.2);
   transform-origin: left;
   cursor: pointer
-}
-
-.checklist-item {
-  list-style-type: none;
-  padding: 20px;
-  margin: 0;
-    
-}
-
-.checklist-item-done {
-  list-style-type: none;
-  padding: 20px;
-  margin: 0;
-  text-decoration: line-through;
-  /* color: red */
 }
 

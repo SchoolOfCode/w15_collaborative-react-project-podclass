@@ -29,8 +29,7 @@ function App() {
   const selectedItems = content.reduce((acc, item) => {
     item.sections.forEach((section) => {
       section.checklist.forEach((checklistItem) => {
-        console.log("checklist item ", checklistItem);
-        if (checklistItem.selected) {
+                if (checklistItem.selected) {
           acc.push(checklistItem);
         }
       });
@@ -38,15 +37,13 @@ function App() {
     return acc;
   }, []);
 
-  console.log("this is the selected items array ", selectedItems);
-
+  
 
 
 
 
   function handleChecklistItemClick(topicId, sectionId, checklistId) {
-    console.log(topicId, sectionId, checklistId);
-    setContent((content) => {
+        setContent((content) => {
       const topicIndex = content.findIndex((topic) => topic.id === topicId);
       const topicToUpdate = content[topicIndex];
       const sectionIndex = topicToUpdate.sections.findIndex(
@@ -81,8 +78,7 @@ function App() {
         updatedTopic,
         ...content.slice(topicIndex + 1),
       ];
-      console.log("checking the updated array ", checkUpdate);
-      return checkUpdate;
+            return checkUpdate;
     });
   }
 
@@ -95,8 +91,7 @@ function App() {
   function changeButtonClass() {
     if (buttonClass === "nav-button") {
       setButtonClass("nav-button-clicked");
-      console.log("class changed");
-    }
+        }
   }
 
   const [completedChecklist, setCompletedChecklist] = useState([]);
