@@ -5,9 +5,10 @@ function Checklist ({items, handleCompleted, className, index}) {
 
     const [toggleState, setToggleState] = useState ();
 
+    console.log ("this is the toggleState", toggleState);
     return (   
         <li className={toggleState ? "checklist-item-done" : "checklist-item"}>
-        <input type="checkbox" checked={() => {
+        <input type="checkbox" onChange = {() => {
             if (toggleState) {handleCompleted(index)}
             setToggleState(!toggleState)}}
         // make this a toggle, use a ternary statement here to check state and set class
@@ -15,7 +16,8 @@ function Checklist ({items, handleCompleted, className, index}) {
         // "podlist-button" onClick={()=>handleCompleted(index)}
         /> 
         {items.text} 
-        </li>)
+        </li>
+        )
 
 } 
 
