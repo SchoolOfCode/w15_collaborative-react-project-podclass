@@ -1,12 +1,29 @@
 import React from "react";
+import {useState} from "react";
 
-function Checklist ({items}) {
-// console.log ("this is items from checklist component ",)
-        return (         
-        <ul>
-        {items.map((item) => (<li className="checklist-item-done" key={item.key}> <button className="podlist-button">+/- PodList</button>{item.text}</li>))}    
-        </ul>
-    )
-}
+function Checklist ({items, handleCompleted, className, index}) {
 
-export default Checklist
+    const [toggleState, setToggleState] = useState ();
+
+    console.log ("this is the toggleState", toggleState);
+    return (   
+        <li className={toggleState ? "checklist-item-done" : "checklist-item"}>
+        <label className="switch">
+        
+        <input className="input" type="checkbox" onChange = {() => {
+            if (toggleState) {handleCompleted(index)}
+            setToggleState(!toggleState)}}
+        /><span className="slider"> </span>
+        </label>
+        {`       ${items.text}`} 
+        </li>
+        )
+        
+    } 
+    
+    export default Checklist
+    
+    // {items.map((item) => (<li className={checklistLiClass} key={item.key} onClick={changeChecklistLiClass}> 
+    // make this a toggle, use a ternary statement here to check state and set class
+    // may need to hook a state to toggle status
+    // "podlist-button" onClick={()=>handleCompleted(index)}

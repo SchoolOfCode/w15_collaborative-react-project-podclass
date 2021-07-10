@@ -19,8 +19,9 @@ function App() {
 
   const [isOpen, setIsOpen] = React.useState(false);
   const [content, setContent] = useState(contentData);
-  const [contentState, setContentState] = useState("");
+  const [contentState, setContentState] = useState("0");
   // const listItem = ["item 1", "item 2", "item 3"];
+  
   const [buttonClass, setButtonClass] = useState("nav-button");
   // const [checklist, setChecklist] = useState([]);
   // const [checklistItemStatus, setChecklistItemStatus] = useState ("display-list-item")
@@ -28,8 +29,7 @@ function App() {
   const selectedItems = content.reduce((acc, item) => {
     item.sections.forEach((section) => {
       section.checklist.forEach((checklistItem) => {
-        console.log("checklist item ", checklistItem);
-        if (checklistItem.selected) {
+                if (checklistItem.selected) {
           acc.push(checklistItem);
         }
       });
@@ -37,11 +37,13 @@ function App() {
     return acc;
   }, []);
 
-  console.log("this is the selected items array ", selectedItems);
+  
+
+
+
 
   function handleChecklistItemClick(topicId, sectionId, checklistId) {
-    console.log(topicId, sectionId, checklistId);
-    setContent((content) => {
+        setContent((content) => {
       const topicIndex = content.findIndex((topic) => topic.id === topicId);
       const topicToUpdate = content[topicIndex];
       const sectionIndex = topicToUpdate.sections.findIndex(
@@ -76,12 +78,10 @@ function App() {
         updatedTopic,
         ...content.slice(topicIndex + 1),
       ];
-      console.log("checking the updated array ", checkUpdate);
-      return checkUpdate;
+            return checkUpdate;
     });
   }
 
-  console.log("this is the class", buttonClass);
 
   function changeState(key) {
     setContentState(key);
@@ -91,10 +91,21 @@ function App() {
   function changeButtonClass() {
     if (buttonClass === "nav-button") {
       setButtonClass("nav-button-clicked");
-      console.log("class changed");
-    }
+        }
   }
 
+  const [completedChecklist, setCompletedChecklist] = useState([]);
+  const [checkCompleted, setCheckCompleted] = useState(false);
+
+  function handleCompletedChecklist (i) {
+    // if (selectedItems[i].className === "") {
+    //    selectedItems[i].className="checklist-item-done";}
+    // if (selectedItems[i].className === "checklist-item-done") {
+    //     selectedItems[i].className="";} 
+
+    setCompletedChecklist ([...selectedItems.slice(0,i), selectedItems[i].className="checklist-item-done",...selectedItems.slice(i+1)])
+  }
+  
   return (
     <>
       {/* <Api/> */}
@@ -108,7 +119,10 @@ function App() {
 
         <Modal open={isOpen} onClose={() => setIsOpen(false)}>
           Checklist is done, we love to see it
-          <Checklist items={selectedItems} />
+         <ul>
+         {selectedItems.map((item, i) => (
+         <Checklist items={selectedItems[i]} key={selectedItems[i].key} className={selectedItems[i].className} handleCompleted = {handleCompletedChecklist} index={i}/>))}
+         </ul>
         </Modal>
       </div>
 
@@ -127,7 +141,6 @@ function App() {
                 />
               ))
           )}
-        </div>
         <button
           className={buttonClass}
           onClick={() => {
@@ -136,23 +149,15 @@ function App() {
         >
           My PodList
         </button>
-        {/* 
-        {titles.map(
-          (heading) =>
-            (heading = <Heading1 key={heading} mainHeading={heading} />)
-        )} */}
-
-        <div className="content">
+        </div>
+             <div className="content">
           <Display
             addChecklistItem={handleChecklistItemClick}
             content={content.filter(
-              (content) => content.id === contentState + 1
+              (content) => content.id === contentState
             )}
           />
         </div>
-      </div>
-      <div>
-        <Checklist items={selectedItems} />
       </div>
     </>
   );

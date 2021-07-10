@@ -1,14 +1,3 @@
-PLAN FOR CHECKLIST
-
-IN THE MAIN PAGE
-
-A checklist item is displayed from the List component (data is taken from contentData.lists)
-On click, find the index of the matching item in the Checklist array and display in Modal by changing the class (display v hide)
-
-IN THE MODAL PAGE
-Items that have been clicked now display with class for styling on click within the Modal page
-
-
 
 
 # Getting Started with Create React App
