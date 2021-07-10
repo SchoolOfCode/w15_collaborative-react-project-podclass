@@ -50,10 +50,12 @@
 .ButtonSeperator {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   left: 20px;
-  bottom: 110px;
-}
+  bottom: 90px;
+  top: 250px;
+  }
 
 /* .content {
   display: flex;
@@ -139,3 +141,4 @@
   text-decoration: line-through;
   color: red
 }
+

@@ -19,6 +19,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.heading {
+  text-align: center;
+  font-size: 5vh;
+}
+.subheading {
+  text-decoration: underline;
+  font-size: 2.5vh;
+}
 * {
   color: whitesmoke;
 }
@@ -27,7 +36,7 @@ code {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  font-weight: bold;
+  /* font-style: italic; */
   text-decoration: underline;  
 }
 
@@ -52,3 +61,4 @@ code {
   text-decoration: line-through;
   color: red
 }
+

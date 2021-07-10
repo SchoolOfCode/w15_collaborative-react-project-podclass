@@ -19,7 +19,7 @@ function App() {
 
   const [isOpen, setIsOpen] = React.useState(false);
   const [content, setContent] = useState(contentData);
-  const [contentState, setContentState] = useState("");
+  const [contentState, setContentState] = useState("0");
   // const listItem = ["item 1", "item 2", "item 3"];
   
   const [buttonClass, setButtonClass] = useState("nav-button");
@@ -130,7 +130,6 @@ function App() {
                 />
               ))
           )}
-        </div>
         <button
           className={buttonClass}
           onClick={() => {
@@ -139,17 +138,12 @@ function App() {
         >
           My PodList
         </button>
-        {/* 
-        {titles.map(
-          (heading) =>
-            (heading = <Heading1 key={heading} mainHeading={heading} />)
-        )} */}
-
-        <div className="content">
+        </div>
+             <div className="content">
           <Display
             addChecklistItem={handleChecklistItemClick}
             content={content.filter(
-              (content) => content.id === contentState + 1
+              (content) => content.id === contentState
             )}
           />
         </div>

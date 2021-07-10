@@ -8,15 +8,27 @@ export let searchItem = "";
 
 export const contentData = [
   {
+    id:0,
+    header: "Welcome to PodClass",
+    sections: [{key: "0.1",
+                subheading:"", 
+                textContent: `This app is for all you podcasting-newbies out there, giving you basic tips and hints on everything you need to get started (along with links to more in-depth stuff, if that’s your vibe...) \n\nAs well as you guys needing just one place to find all your basic podcast start-up info, we know that one of the biggest blocks to starting your own podcast is managing your time...so we’ve created a personalised checklist for you to use "My PodList".  \n\nAny time you see the \u2611 symbol, click to add that specific activity to your very own to-do list, helping you to see everything you need to do.  Remember to check it off when it’s done so you can track your progress towards your podcast launch :) \n\nHappy podcasting! \n\nThe PodClass Team xx` ,
+                image: "",
+                checklist: [{key: "", text:"", selected: false}
+                ]
+                }
+    ]
+  },
+  {
     id:1,
     header: "Before you start",
     sections: [{key: "1.1",
                 subheading:"Category and Topic", 
                 textContent: "The first thing to think about when looking to create your podcast is your topic, or subject. \n\n Pick something related to your interests, hobbies or anything that you’re passionate about. This way the conversation will be sure to flow… \n\nIf you are feeling stuck, maybe use Quora or Twitter Explore to spark up topic ideas. Twitter Explore includes trending topics, which might be handing when thinking about attracting new audiences. \n\nAnother approach is to think about your “USP” (unique selling point).  What topic might help you stand out from what is already on offer?" ,
                 image: "",
-                checklist: [{key: "1.1.1", text:"decide topic", selected: false},
-                            {key: "1.1.2", text:"checkout potential ideas", selected: false},
-                            {key: "1.1.3", text:"checkout popular podcasts", selected: false}
+                checklist: [{key: "1.1.1", text:"\u2611 decide topic", selected: false},
+                            {key: "1.1.2", text:"\u2611 checkout potential ideas", selected: false},
+                            {key: "1.1.3", text:"\u2611 checkout popular podcasts", selected: false}
                         ]
                 },
                 {key: "1.2",
@@ -185,7 +197,7 @@ export const contentData = [
 ];
 
 export const titles = [
-  // "Go on air!",
+  "Go on air!",
   "Before you start",
   "Content",
   "Recording environment",

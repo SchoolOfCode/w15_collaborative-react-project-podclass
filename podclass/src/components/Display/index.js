@@ -7,10 +7,10 @@ const Display = ({ content, addChecklistItem }) => {
     <div className={styles.display}>
       {content.map((item) => (
         <div className="displayText" key={item.id}>
-          <h1> {item.header}</h1>
+          <h1 className="heading"> {item.header}</h1>
           {item.sections.map((section) => (
             <div key={section.key}>
-              <h2>{section.subheading}</h2>
+              <h2 className="subheading">{section.subheading}</h2>
               <p> {section.textContent}</p>
               <p> {section.image}</p>
               {/* add a ul, add a list and map over sections.checklist array to add list items*/}
