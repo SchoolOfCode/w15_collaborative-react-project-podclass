@@ -5,14 +5,15 @@ import { useEffect, useState } from "react";
 // - call the API component and hand down a prop of search
 // run the API fetch function, create the html elements and hand back App
 
-function Api() {
+function Api(search) {
   const [equipmentSearch, setEquipmentSearch] = useState("");
   const [equipmentURL, setEquipmentURL] = useState("");
   const [equipmentImage, setEquipmentImage] = useState("");
+  const[]
   useEffect(() => {
     async function getEquipment() {
       const response = await fetch(
-        `https://amazon23.p.rapidapi.com/product-search?query=podcast%20mic&country=US`,
+        `https://amazon23.p.rapidapi.com/product-search?query='${search}&country=US`,
         {
           method: "GET",
           headers: {
@@ -33,6 +34,13 @@ function Api() {
 
   return (
     <div>
+      <button
+        onClick={() => {
+          Api("cucumber");
+        }}
+      >
+        MIC
+      </button>
       {console.log("Nancy", equipmentSearch)}
       <p>{equipmentSearch}</p>
       <a href={equipmentURL}>
