@@ -8,14 +8,14 @@ function Checklist ({items, handleCompleted, className, index}) {
     console.log ("this is the toggleState", toggleState);
     return (   
         <li className={toggleState ? "checklist-item-done" : "checklist-item"}>
-        <div class="switch">
-        <span class="slider">
-        <input type="checkbox" onChange = {() => {
+        <label className="switch">
+        
+        <input className="input" type="checkbox" onChange = {() => {
             if (toggleState) {handleCompleted(index)}
             setToggleState(!toggleState)}}
-        /> </span>
-        </div>
-        {items.text} 
+        /><span className="slider"> </span>
+        </label>
+        {`       ${items.text}`} 
         </li>
         )
         

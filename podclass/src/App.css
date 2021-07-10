@@ -74,13 +74,13 @@
 } */
 /*div to only appear if there is content*/
 
-.podlist-button {
+/* .podlist-button {
   background-color: rgba(255, 255, 255, 0.995);
   color: rgb(0, 0, 20);
   padding: 15px 32px;
   text-align: center;
   /* display: inline-block; */
-  font-size: 12px;
+  /* font-size: 12px;
   margin: 2px 50px 2px 1.5px;
   cursor: pointer;
   border-radius: 6px;
@@ -91,15 +91,15 @@
   background-color: rgba(255, 255, 255, 0.995);
   color: rgb(20, 8, 0);
   padding: 15px 32px;
-  text-align: center;
+  text-align: center; */
   /* display: inline-block; */
-  font-size: 14px;
+  /* font-size: 14px;
   margin: 2px 50px 2px 1.5px;
   cursor: pointer;
   border-radius: 8px;
   border: 2px solid #fdd7c5;
   box-shadow: 0 0 15px #ff5e00, 0 0 10px #ff4800;
-}
+}  */
 
 .close-button {
   background-color: rgba(255, 255, 255, 0.995);
@@ -131,17 +131,18 @@
   list-style-type: none;
   padding: 20px;
   font-size: 2vh;
-  margin: 0;
+  margin-left: 20px;
   
 }
 
 .checklist-item-done {
   list-style-type: none;
   padding: 20px;
-  margin: 0;
+  margin-left: 20px;
   text-decoration: line-through;
-  font-size: 1.8vh;
-  color: red
+  text-decoration-color: red;
+  font-size: 2vh;
+  color: grey
 }
 
 /*Vic+SWITCH-BUTTON*/
@@ -151,6 +152,8 @@
   display: inline-block;
   width: 60px;
   height: 34px;
+  margin-right: 20px
+
 }
 /* Hide default HTML checkbox */
 .switch input {
@@ -184,22 +187,22 @@
   transition: 0.4s;
   box-shadow: 0 0 15px #00ff00, 0 0 10px #005a00;
 }
-input:hover + .slider {
+.input:hover + .slider {
   background-color: rgba(255, 231, 212, 0.995);
 }
-input:hover + .slider:before {
+.input:hover + .slider:before {
   background: radial-gradient(#ffffff 0%, orange 100%);
   -webkit-transition: 0.4s;
   transition: 0.4s;
   box-shadow: 0 0 15px orangered, 0 0 10px orange;
 }
-input:checked + .slider {
+.input:checked + .slider {
   background-color: rgba(20, 0, 0, 0.794);
 }
-input:focus + .slider {
+.input:focus + .slider {
   box-shadow: 0 0 1px #ff7300;
 }
-input:checked + .slider:before {
+.input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
