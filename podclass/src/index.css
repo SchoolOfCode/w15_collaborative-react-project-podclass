@@ -23,3 +23,32 @@ code {
   color: whitesmoke;
 }
 
+.hide {
+  display: none;
+}
+/* move below somewhere else */
+#landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.animated-logo {
+  width: 40%;
+  -webkit-filter: drop-shadow(0 0 10px #00ffff);
+  filter: drop-shadow(0 0 10px #00ffff);
+  animation: huechange 5s linear infinite;
+}
+@keyframes huechange {
+  0% {
+    filter: drop-shadow(0 0 10px #00ffff);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 15px #00ffff);
+  }
+
+  100% {
+    filter: drop-shadow(0 0 10px #00ffff);
+  }
+}
