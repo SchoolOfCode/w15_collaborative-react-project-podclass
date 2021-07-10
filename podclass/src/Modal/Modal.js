@@ -14,13 +14,17 @@ const modalStyles = {
 
 const overlayStyle = {
     position: 'fixed',
-    top: 100,
+    top: 120,
     left: 100,
     right: 100,
-    bottom: 100,
+    bottom: 120,
     backgroundColor: 'rgba(0,0,0,0.7)',
     zIndex: 1000,
-    backdropFilter: 'blur(10px)'
+    border: "4.5px solid #deffff",
+    boxShadow: "0 0 15px #ff5e00, 0 0 10px #ff4800, inset 0 0 15px #ff5e00",
+    // boxShadow: "0 0 20px #00ffff, 0 0 15px #00d9ff, inset 0 0 15px #00ffff",
+    borderRadius: "8px",
+    backdropFilter: "blur(10px)"
 }
 
 
