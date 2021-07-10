@@ -98,6 +98,19 @@ function App() {
       console.log("class changed");
     }
   }
+
+  const [completedChecklist, setCompletedChecklist] = useState([]);
+  const [checkCompleted, setCheckCompleted] = useState(false);
+
+  function handleCompletedChecklist (i) {
+    // if (selectedItems[i].className === "") {
+    //    selectedItems[i].className="checklist-item-done";}
+    // if (selectedItems[i].className === "checklist-item-done") {
+    //     selectedItems[i].className="";} 
+
+    setCompletedChecklist ([...selectedItems.slice(0,i), selectedItems[i].className="checklist-item-done",...selectedItems.slice(i+1)])
+  }
+  
   return (
     <>
       {/* <Api/> */}
@@ -111,7 +124,10 @@ function App() {
 
         <Modal open={isOpen} onClose={() => setIsOpen(false)}>
           Checklist is done, we love to see it
-          <Checklist items={selectedItems} />
+         <ul>
+         {selectedItems.map((item, i) => (
+         <Checklist items={selectedItems[i]} key={selectedItems[i].key} className={selectedItems[i].className} handleCompleted = {handleCompletedChecklist} index={i}/>))}
+         </ul>
         </Modal>
       </div>
 

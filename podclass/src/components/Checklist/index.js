@@ -1,24 +1,24 @@
 import React from "react";
 import {useState} from "react";
 
-function Checklist ({items}) {
-const [checklistLiClass, setChecklistLiClass] = useState("checklist-item");
+function Checklist ({items, handleCompleted, className, index}) {
 
-    function changeChecklistLiClass() {
-        console.log("what the fuck");
-        (checklistLiClass === "checklist-item") ?  
-                setChecklistLiClass("checklist-item-done") :          
-                setChecklistLiClass("checklist-item")
-      }
-            
+    const [toggleState, setToggleState] = useState ();
+
     return (   
-        <ul>
-        {items.map((item) => (<li className={checklistLiClass} key={item.key} onClick={changeChecklistLiClass}> <button className="podlist-button" >+/- PodList</button>
-        {item.text}
-        </li>))}
-        {console.log("checklist class ", {checklistLiClass}) }
-        </ul>
-    )
+        <li className={toggleState ? "checklist-item-done" : "checklist-item"}>
+        <input type="checkbox" checked={() => {
+            if (toggleState) {handleCompleted(index)}
+            setToggleState(!toggleState)}}
+        // make this a toggle, use a ternary statement here to check state and set class
+        // may need to hook a state to toggle status
+        // "podlist-button" onClick={()=>handleCompleted(index)}
+        /> 
+        {items.text} 
+        </li>)
+
 } 
 
 export default Checklist
+
+// {items.map((item) => (<li className={checklistLiClass} key={item.key} onClick={changeChecklistLiClass}> 
