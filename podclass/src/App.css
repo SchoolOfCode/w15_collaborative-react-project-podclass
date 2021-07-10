@@ -1,48 +1,4 @@
-/* .App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-buttons {
-  color: pink;
-}
-a {
-  color: purple;
-  text-decoration: underline;
-} */
 
 .nav-button {
   background-color: rgba(255, 255, 255, 0.995);
@@ -86,28 +42,24 @@ a {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-.display-list-item {
-  text-decoration-line: none;
-}
-
-.completed-list-item {
-  text-decoration-line: line-through;
-}
 
 #navigation {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* position: fixed   might need this back in*/
 }
 
 .ButtonSeperator {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   left: 20px;
-  bottom: 110px;
-}
+  bottom: 90px;
+  top: 250px;
+  }
 
 /* .content {
   display: flex;
@@ -125,3 +77,141 @@ a {
   padding: 20px 20px 20px;
 } */
 /*div to only appear if there is content*/
+
+/* .podlist-button {
+  background-color: rgba(255, 255, 255, 0.995);
+  color: rgb(0, 0, 20);
+  padding: 15px 32px;
+  text-align: center;
+  /* display: inline-block; */
+  /* font-size: 12px;
+  margin: 2px 50px 2px 1.5px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid #deffff;
+  box-shadow: 0 0 15px #00ffff, 0 0 10px #00d9ff;
+}
+.podlist-button:hover {
+  background-color: rgba(255, 255, 255, 0.995);
+  color: rgb(20, 8, 0);
+  padding: 15px 32px;
+  text-align: center; */
+  /* display: inline-block; */
+  /* font-size: 14px;
+  margin: 2px 50px 2px 1.5px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #fdd7c5;
+  box-shadow: 0 0 15px #ff5e00, 0 0 10px #ff4800;
+}  */
+
+.close-button {
+  background-color: rgba(255, 255, 255, 0.995);
+  color: rgb(0, 0, 20);
+  padding: 15px 32px;
+  text-align: center;
+  /* display: inline-block; */
+  font-size: 12px;
+  margin: 2px 50px 2px 1.5px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid #deffff;
+  box-shadow: 0 0 15px #00ffff, 0 0 10px #00d9ff;
+}
+.podlist-button:hover {
+  background-color: rgba(255, 255, 255, 0.995);
+  color: rgb(20, 8, 0);
+  padding: 15px 32px;
+  text-align: center;
+  /* display: inline-block; */
+  font-size: 14px;
+  margin: 2px 50px 2px 1.5px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #fdd7c5;
+  box-shadow: 0 0 15px #ff5e00, 0 0 10px #ff4800;
+}
+.checklist-item {
+  list-style-type: none;
+  padding: 20px;
+  font-size: 2vh;
+  margin-left: 20px;
+  
+}
+
+.checklist-item-done {
+  list-style-type: none;
+  padding: 20px;
+  margin-left: 20px;
+  text-decoration: line-through;
+  text-decoration-color: red;
+  font-size: 2vh;
+  color: grey
+}
+
+/*Vic+SWITCH-BUTTON*/
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 20px
+
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  border-radius: 34px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.995);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background: radial-gradient(#ffffff 0%, #00ff00 100%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0 15px #00ff00, 0 0 10px #005a00;
+}
+.input:hover + .slider {
+  background-color: rgba(255, 231, 212, 0.995);
+}
+.input:hover + .slider:before {
+  background: radial-gradient(#ffffff 0%, orange 100%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0 15px orangered, 0 0 10px orange;
+}
+.input:checked + .slider {
+  background-color: rgba(20, 0, 0, 0.794);
+}
+.input:focus + .slider {
+  box-shadow: 0 0 1px #ff7300;
+}
+.input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  box-shadow: 0 0 15px #ff0000, 0 0 10px #ff004c;
+  background-color: red;
+  background: radial-gradient(#ff0000 0%, #800000 100%);
+}
+/*Vic+SWITCH-BUTTON*/

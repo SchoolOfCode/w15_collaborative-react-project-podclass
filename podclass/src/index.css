@@ -91,3 +91,29 @@ code {
     opacity: 1;
   }
 }
+
+.heading {
+  text-align: center;
+  font-size: 5vh;
+}
+.subheading {
+  text-decoration: underline;
+  font-size: 2.5vh;
+}
+
+.checklist-item-content {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  /* font-style: italic; */
+  text-decoration: underline;
+  text-decoration-color:#00FFFF ;  
+}
+
+.checklist-item-content:hover {
+  transform: scale(1.2);
+  transform-origin: left;
+  cursor: pointer
+}
+
+
