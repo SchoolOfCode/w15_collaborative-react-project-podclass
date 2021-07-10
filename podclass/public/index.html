@@ -27,9 +27,45 @@
     <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <div id="portal"></div>
+    <section id="landing" class="">
+      <img id="frame" class="animated-logo" src="/AnimatedLogoPNG/9.png" />
+      <button id="flicker" onclick="landingToHomepage()" class="nav-button">
+        GO ON AIR
+      </button>
+      <!-- Experiments -->
+      <script>
+        function landingToHomepage() {
+          let landing = document.getElementById("landing");
+          let home = document.getElementById("homepage");
+          setTimeout(function () {
+            landing.remove();
+            home.classList.remove("hide");
+          }, 1000);
+        }
+
+        //Logo Animation
+        function animatedLogoChange() {
+          setTimeout(function () {
+            let frameNumber = 0;
+            let interval = setInterval(() => {
+              frameNumber += 1;
+              document.getElementById(
+                "frame"
+              ).src = `/AnimatedLogoPNG/${frameNumber}.png`;
+              if (frameNumber === 9) {
+                clearInterval(interval);
+              }
+            }, 400);
+          }, 1200);
+        }
+        animatedLogoChange();
+      </script>
+    </section>
+    <section id="homepage" class="hide">
+      <noscript>You need to enable JavaScript to run this app.</noscript>
+      <div id="root"></div>
+      <div id="portal"></div>
+    </section>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

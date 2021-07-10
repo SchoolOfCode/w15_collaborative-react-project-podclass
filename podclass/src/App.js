@@ -9,7 +9,7 @@ import Display from "./components/Display";
 // import List from "./components/List";
 import Modal from "./Modal/Modal";
 import Checklist from "../src/components/Checklist";
-import Api from "../src/components/API";
+// import Api from "../src/components/API";
 
 function App() {
   // const buttonWrapperStyles = {
@@ -109,7 +109,7 @@ function App() {
   return (
     <>
       {/* <Api/> */}
-      
+
       <div>
         {/* <button className={buttonClass} onClick={()=> {
         setIsOpen(true);
