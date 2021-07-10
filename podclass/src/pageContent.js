@@ -1,3 +1,4 @@
+import Logo from "../src/Images/logoButton.png";
 import Button from "./components/Button";
 export const listItems = [
     "what's your name?",
@@ -196,8 +197,10 @@ export const contentData = [
 //   },
 ];
 
+
 export const titles = [
-  "Go on air!",
+  // (<img src={Logo} alt="logo" width="320" height="320"></img>),
+  "Welcome",
   "Before you start",
   "Content",
   "Recording environment",
