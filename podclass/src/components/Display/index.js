@@ -3,7 +3,8 @@
 import styles from "./index.module.css";
 
 const Display = ({ content, addChecklistItem }) => {
-  return (
+  
+   return (
     <div className={styles.display}>
       {content.map((item) => (
         <div className="displayText" key={item.id}>

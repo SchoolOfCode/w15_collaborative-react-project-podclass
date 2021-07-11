@@ -98,13 +98,14 @@ function App() {
       {/* Podlist/Checklist overlay */}
       <div>
         <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-          <h1>Your Podcast To-Do PodList</h1>
+          <h1 className="podlist-heading">Your Podcast To-Do PodList</h1>
           <ul>
             {selectedItems.map((item, i) => (
               <Checklist
                 items={selectedItems[i]}
                 key={selectedItems[i].key}
-                className={selectedItems[i].className}
+                className={selectedItems[i].className="checklist-item-done" ? "checklist-item-done" : "checklist-item"}
+                // className={selectedItems[i].className}
                 handleCompleted={handleCompletedChecklist}
                 index={i}
               />

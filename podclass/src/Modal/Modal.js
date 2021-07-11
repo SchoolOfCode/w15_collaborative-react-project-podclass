@@ -37,8 +37,7 @@ export default function Modal({ open, children, onClose, selectedItems }) {
           X
         </button>
         {children}
-        <p>some text here</p>
-      </div>
+          </div>
     </>,
     document.getElementById("portal")
   );
