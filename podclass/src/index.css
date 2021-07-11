@@ -112,13 +112,23 @@ code {
   margin: 0;
   /* font-style: italic; */
   text-decoration: underline;
-  text-decoration-color:#00FFFF ;  
+  text-decoration-color: #00ffff;
 }
 
 .checklist-item-content:hover {
   transform: scale(1.2);
   transform-origin: left;
-  cursor: pointer
+  cursor: pointer;
+  text-shadow: 0 0 2px #ff5e00, 0 0 1px #ff4800;
+  text-decoration-color: #ff5e00;
 }
-
-
+.checklist-item-content:active {
+  transform: scale(1.2);
+  transform-origin: left;
+  cursor: pointer;
+  color: #ff0000;
+  text-shadow: 0 0 15px #ff0000, 0 0 10px #ff004c;
+  text-decoration-color: #ff0000;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
