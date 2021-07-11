@@ -18,6 +18,7 @@
   box-shadow: 0 0 15px #00ffff, 0 0 10px #00d9ff;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  font-family: "Segoe UI";
 }
 .nav-button:hover {
   background-color: rgba(255, 255, 255, 0.995);
@@ -151,12 +152,14 @@
   border-radius: 8px;
   border: 2px solid #fdd7c5;
   box-shadow: 0 0 15px #ff5e00, 0 0 10px #ff4800;
+  font-family: "Segoe UI";
 }
 .checklist-item {
   list-style-type: none;
   padding: 20px;
   font-size: 2vh;
   margin-left: 20px;
+  font-family: "Segoe UI";
 }
 
 .checklist-item-done {
@@ -167,6 +170,7 @@
   text-decoration-color: red;
   font-size: 2vh;
   color: grey;
+  font-family: "Segoe UI";
 }
 
 /*Vic+SWITCH-BUTTON*/

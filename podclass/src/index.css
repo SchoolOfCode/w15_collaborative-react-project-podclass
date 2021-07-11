@@ -99,16 +99,24 @@ code {
 .heading {
   text-align: center;
   font-size: 5vh;
-}
+  }
+
+.podlist-heading {
+  text-align: center;
+  font-size: 6vh;
+  }
 .subheading {
   text-decoration: underline;
   font-size: 2.5vh;
-}
+  margin: 40px;
+  }
 
-.p {
+p {
   margin-left: 40px;
   margin-right: 40px;
   text-align: justify;
+  font-family: "Segoe UI";
+  
 }
 .checklist-item-content {
   list-style-type: none;
@@ -117,6 +125,7 @@ code {
   /* font-style: italic; */
   text-decoration: underline;
   text-decoration-color: #00ffff;
+  font-family: "Segoe UI";
 }
 
 .checklist-item-content:hover {
@@ -125,6 +134,7 @@ code {
   cursor: pointer;
   text-shadow: 0 0 2px #ff5e00, 0 0 1px #ff4800;
   text-decoration-color: #ff5e00;
+  font-family: "Segoe UI";
 }
 .checklist-item-content:active {
   transform: scale(1.2);
@@ -135,4 +145,5 @@ code {
   text-decoration-color: #ff0000;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  font-family: "Segoe UI";
 }
