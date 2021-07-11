@@ -139,7 +139,7 @@ function App() {
 
           {/* create button to display checklist */}
           <button
-            className={buttonClass}
+            className={`${buttonClass} break`}
             onClick={() => {
               setIsOpen(true);
             }}

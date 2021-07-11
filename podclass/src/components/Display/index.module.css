@@ -19,5 +19,19 @@
   margin: auto;
   padding: 20px 40px 20px 40px;
   white-space: pre-wrap;
+  margin-left: 70px;
+  animation: glow 5s linear infinite;
 }
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px #00ffff, 0 0 15px #00d9ff, inset 0 0 15px #00ffff;
+  }
 
+  50% {
+    box-shadow: 0 0 25px #00ffff, 0 0 20px #00d9ff, inset 0 0 20px #00d9ff;
+  }
+
+  100% {
+    box-shadow: 0 0 20px #00ffff, 0 0 15px #00d9ff, inset 0 0 15px #00ffff;
+  }
+}
