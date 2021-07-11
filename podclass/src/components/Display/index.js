@@ -3,14 +3,15 @@
 import styles from "./index.module.css";
 
 const Display = ({ content, addChecklistItem }) => {
-  return (
+  
+   return (
     <div className={styles.display}>
       {content.map((item) => (
         <div className="displayText" key={item.id}>
           <h1 className="heading"> {item.header}</h1>
             {item.sections.map((section) => (
             <div key={section.key}>
-              <h2 className="subheading">{section.subheading}</h2>
+              <h2 className={() => {(section.key === 0.1) ? section.className="heading" : section.className="subheading"}}>{section.subheading}</h2>
               <p> {section.textContent}</p>
               <p> {section.image}</p>
               <ul>{section.checklist.map((checklistItem) => (

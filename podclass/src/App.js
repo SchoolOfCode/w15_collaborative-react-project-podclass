@@ -104,7 +104,8 @@ function App() {
               <Checklist
                 items={selectedItems[i]}
                 key={selectedItems[i].key}
-                className={selectedItems[i].className}
+                className={selectedItems[i].className="checklist-item-done" ? "checklist-item-done" : "checklist-item"}
+                // className={selectedItems[i].className}
                 handleCompleted={handleCompletedChecklist}
                 index={i}
               />
