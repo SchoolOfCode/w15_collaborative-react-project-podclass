@@ -1,5 +1,4 @@
 import React from "react";
-// import Logo from "../../Images/logoButton.png";
 
 const Button = ({ logo, identity, identityNumber, buttonName, className, changeButtonClass }) => {
    return (

@@ -1,3 +1,5 @@
+// THIS IS COMMENTED OUT AS WE DID NOT MANAGE TO USE THIS COMPONENT.  TO BE REVISITED
+
 // import { useEffect, useState } from "react";
 
 // // from main equipment page onClick

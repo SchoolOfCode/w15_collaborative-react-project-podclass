@@ -7,10 +7,7 @@ import Display from "./components/Display";
 import Modal from "./Modal/Modal";
 import Checklist from "../src/components/Checklist";
 import Logo from "../src/Images/logoButton.png";
-// import List from "./components/List";
-// import Heading1 from "../src/components/h1";
-// import Main from "../src/components/Main";
-// import Api from "../src/components/API";
+
 
 function App() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -74,16 +71,16 @@ function App() {
 
   function changeState(key) {
     setContentState(key);
-    console.log("hello", contentState);
-  }
+    }
 
-  // change colors on buttons when clicked
+  // change colors on navigation buttons when clicked
   function changeButtonClass() {
     if (buttonClass === "nav-button") {
       setButtonClass("nav-button-clicked");
     }
   }
 
+// change styling on checklist items when clicked
   function handleCompletedChecklist(i) {
     setCompletedChecklist([
       ...selectedItems.slice(0, i),
@@ -93,8 +90,6 @@ function App() {
   }
   return (
     <>
-      {/* <Api/> */}
-
       {/* Podlist/Checklist overlay */}
       <div>
         <Modal open={isOpen} onClose={() => setIsOpen(false)}>
@@ -105,7 +100,6 @@ function App() {
                 items={selectedItems[i]}
                 key={selectedItems[i].key}
                 className={selectedItems[i].className="checklist-item-done" ? "checklist-item-done" : "checklist-item"}
-                // className={selectedItems[i].className}
                 handleCompleted={handleCompletedChecklist}
                 index={i}
               />

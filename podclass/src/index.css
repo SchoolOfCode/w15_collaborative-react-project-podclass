@@ -10,7 +10,6 @@ body {
   background-image: url("./Images/PNGBackground.png");
   background-repeat: no-repeat;
   background-size: cover;
-  /* potentially remove the one below */
   background-attachment: fixed;
   /* Vic+ */
 }
@@ -29,7 +28,7 @@ code {
 .hide {
   display: none;
 }
-/* move below somewhere else */
+
 #landing {
   display: flex;
   flex-direction: column;
@@ -42,8 +41,7 @@ code {
   filter: drop-shadow(0 0 10px #00ffff);
   animation: huechange 5s linear infinite, flicker 3s;
   animation-delay: 0.2s;
-  /* animation: flicker 3s linear infinite; */
-}
+  }
 #flicker {
   animation: flicker 3s linear infinite;
 }

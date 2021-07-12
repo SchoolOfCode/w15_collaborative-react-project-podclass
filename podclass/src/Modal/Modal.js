@@ -21,7 +21,6 @@ const overlayStyle = {
   zIndex: 1000,
   border: "4.5px solid #deffff",
   boxShadow: "0 0 15px #ff5e00, 0 0 10px #ff4800, inset 0 0 15px #ff5e00",
-  // boxShadow: "0 0 20px #00ffff, 0 0 15px #00d9ff, inset 0 0 15px #00ffff",
   borderRadius: "8px",
   backdropFilter: "blur(10px)",
 };
