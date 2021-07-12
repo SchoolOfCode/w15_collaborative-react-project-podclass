@@ -1,7 +1,4 @@
- // if (selectedItems[i].className === "") {
-    //    selectedItems[i].className="checklist-item-done";}
-    // if (selectedItems[i].className === "checklist-item-done") {
-    //     selectedItems[i].className="";} 
+
 
 # Getting Started with Create React App
 
