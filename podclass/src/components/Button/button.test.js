@@ -16,8 +16,8 @@ test('Check if button component renders',
 
 test('Button calls the handleClick function when clicked', 
     ()=>{
-    const { getByText } = render (<Button{...testProps}/>);
-    const button = getByText('');
+    const { getByTestId } = render (<Button{...testProps}/>);
+    const button = getByTestId('button-component');
     fireEvent.click(button);
     expect(testProps.handleClick).toHaveBeenCalled();
 })
