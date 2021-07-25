@@ -1,4 +1,3 @@
-
 # PodClass
 
 This project was designed to help people understand what it takes to start a podcast.
@@ -31,8 +30,8 @@ This page is still in developement! Any feedback is greatly welcomed. See our fe
 ## Authors
 
 - [@BecksMaybury](https://github.com/BecksMaybury)
-- [@VicRenRen] (https://github.com/VicRenRen)
-- [@LewisMurray00] (https://github.com/LewisMurray00)
+- [@VicRenRen](https://github.com/VicRenRen)
+- [@LewisMurray00](https://github.com/LewisMurray00)
 
   
 ## Demo
@@ -42,7 +41,7 @@ This page is still in developement! Any feedback is greatly welcomed. See our fe
 - Pick a section you want to start learning about and look for a check list. Click on any line in that list.
 - This will automatically add this to your personal checklist which you can interact with through "My PodList".
 
-PodClass Demo Recording.mp4
+https://user-images.githubusercontent.com/81425720/126897835-1f4d8a1c-9794-4a6e-95f0-9d8ebe18473f.mp4
 
 ## To Start
 
