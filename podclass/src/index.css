@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Vic+ */
+  background-color: black;
+  background-image: url("./Images/PNGBackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /* Vic+ */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600&display=swap");
+* {
+  color: whitesmoke;
+  letter-spacing: 1.2px;
+  font-family: "Big Shoulders Display", cursive;
+}
+
+.hide {
+  display: none;
+}
+
+#landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.animated-logo {
+  width: 40%;
+  -webkit-filter: drop-shadow(0 0 10px #00ffff);
+  filter: drop-shadow(0 0 10px #00ffff);
+  animation: huechange 5s linear infinite, flicker 3s;
+  animation-delay: 0.2s;
+  }
+#flicker {
+  animation: flicker 3s linear infinite;
+}
+
+@keyframes huechange {
+  0% {
+    filter: drop-shadow(0 0 10px #00ffff);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 15px #00ffff);
+  }
+
+  100% {
+    filter: drop-shadow(0 0 10px #00ffff);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+
+  72% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.heading {
+  text-align: center;
+  font-size: 5vh;
+  }
+
+.podlist-heading {
+  text-align: center;
+  font-size: 6vh;
+  }
+.subheading {
+  text-decoration: underline;
+  font-size: 2.5vh;
+  margin: 40px;
+  }
+
+p {
+  margin-left: 40px;
+  margin-right: 40px;
+  text-align: justify;
+  font-family: "Segoe UI";
+  
+}
+.checklist-item-content {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  /* font-style: italic; */
+  text-decoration: underline;
+  text-decoration-color: #00ffff;
+  font-family: "Segoe UI";
+}
+
+.checklist-item-content:hover {
+  transform: scale(1.2);
+  transform-origin: left;
+  cursor: pointer;
+  text-shadow: 0 0 2px #ff5e00, 0 0 1px #ff4800;
+  text-decoration-color: #ff5e00;
+  font-family: "Segoe UI";
+}
+.checklist-item-content:active {
+  transform: scale(1.2);
+  transform-origin: left;
+  cursor: pointer;
+  color: #ff0000;
+  text-shadow: 0 0 15px #ff0000, 0 0 10px #ff004c;
+  text-decoration-color: #ff0000;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  font-family: "Segoe UI";
+}
