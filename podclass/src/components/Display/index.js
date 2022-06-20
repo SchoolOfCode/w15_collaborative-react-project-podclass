@@ -12,7 +12,7 @@ const Display = ({ content, addChecklistItem }) => {
               <h2 className="subheading">{section.subheading}</h2>
               <p> {section.textContent}</p>
               <ul>{section.checklist.map((checklistItem) => (
-                  <li className="checklist-item-content"key={checklistItem.key} onClick={() => addChecklistItem(item.id, section.key, checklistItem.key)}>
+                  <li data-testid='check-toggle' className="checklist-item-content"key={checklistItem.key} onClick={() => addChecklistItem(item.id, section.key, checklistItem.key)}>
                     {checklistItem.text}</li>))}</ul>
             </div>))}
         </div>))}
